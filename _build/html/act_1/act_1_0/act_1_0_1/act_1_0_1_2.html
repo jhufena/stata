@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>. &#8212; My Jupyter Book</title>
+    <title> &#8212; My Jupyter Book</title>
   
   
   
@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="." href="../../../act_2/act_2_2/act_2_2_0/act_2_2_0_1.html" />
-    <link rel="prev" title="." href="act_1_0_1_1.html" />
+    <link rel="prev" title="" href="act_1_0_1_1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -160,12 +160,16 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../act_1_0_0/act_1_0_0_1.html"></a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../act_1_0_0/act_1_0_0_2.html">.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../act_1_0_0/act_1_0_0_2.html"></a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Project</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="act_1_0_1_1.html">.</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="act_1_0_1_1.html"></a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"></a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Numeracy</span></p>
 <ul class="nav bd-sidenav">
@@ -304,7 +308,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -315,11 +321,29 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>.</h1>
+    <h1></h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook-and-python">1. Jupyter Notebook and Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-github-actions-and-github-pages">2. GitHub, GitHub Actions, and GitHub Pages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code-and-shell-scripts">3. VS Code and Shell Scripts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-in-jupyter-notebook">4. R in Jupyter Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#embedding-media">5. Embedding Media</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-time-feedback">6. Real-time Feedback</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -330,7 +354,71 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>.<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<h1><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id2">
+<h1>4<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h1>
+<p>Given your existing technical stack, there are several ways you could make quiz results available instantly to students. Here are some approaches, tailored to the tools you’re familiar with:</p>
+<section id="jupyter-notebook-and-python">
+<h2>1. Jupyter Notebook and Python<a class="headerlink" href="#jupyter-notebook-and-python" title="Permalink to this heading">#</a></h2>
+<p>Since you already use <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> notebooks, you could design your quiz as a Jupyter Notebook. Using Python code cells, you can evaluate quiz answers and provide immediate feedback.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example Python Code for a Multiple-Choice Question</span>
+<span class="n">question_1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is the command to import Excel files into Stata? &quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">question_1</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;import excel&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Correct! Moving to the next question.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Incorrect. The correct answer is &#39;import excel&#39;.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="github-github-actions-and-github-pages">
+<h2>2. GitHub, GitHub Actions, and GitHub Pages<a class="headerlink" href="#github-github-actions-and-github-pages" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Use GitHub Pages to host a simple website where students can take the quiz.</p></li>
+<li><p>Create the quiz as a form (possibly using HTML and JavaScript).</p></li>
+<li><p>Use GitHub Actions to automatically score the quiz when a student submits their answers and then update the GitHub Pages site with their score and feedback.</p></li>
+</ul>
+</section>
+<section id="vs-code-and-shell-scripts">
+<h2>3. VS Code and Shell Scripts<a class="headerlink" href="#vs-code-and-shell-scripts" title="Permalink to this heading">#</a></h2>
+<p>You could develop shell scripts to automate the process of quiz taking. While this may not be the most user-friendly interface for everyone, it could work well for a more technical audience.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example Shell Script</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;What is the command to import Excel files into Stata?&quot;</span>
+<span class="nb">read</span><span class="w"> </span>answer
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$answer</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;import excel&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Correct!&quot;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Incorrect. The correct answer is &#39;import excel&#39;.&quot;</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
+</section>
+<section id="r-in-jupyter-notebook">
+<h2>4. R in Jupyter Notebook<a class="headerlink" href="#r-in-jupyter-notebook" title="Permalink to this heading">#</a></h2>
+<p>Given your comfort with R, you can also design the quiz in a Jupyter notebook using the R kernel. Just like Python, R can provide immediate output and can be great for statistical analyses that you might want to include in your quizzes.</p>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example R Code for a Multiple-Choice Question</span>
+<span class="n">answer</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">readline</span><span class="p">(</span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;What is the command to import Excel files into Stata? &quot;</span><span class="p">)</span>
+
+<span class="nf">if </span><span class="p">(</span><span class="n">answer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;import excel&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;Correct! Moving to the next question.&quot;</span><span class="p">)</span>
+<span class="p">}</span><span class="w"> </span><span class="n">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;Incorrect. The correct answer is &#39;import excel&#39;.&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="embedding-media">
+<h2>5. Embedding Media<a class="headerlink" href="#embedding-media" title="Permalink to this heading">#</a></h2>
+<p>Since you plan to use embedded media like YouTube videos, you can use HTML or Markdown within Jupyter notebooks or on GitHub Pages to include these resources. The same mediums could display quiz questions followed by this interactive content.</p>
+</section>
+<section id="real-time-feedback">
+<h2>6. Real-time Feedback<a class="headerlink" href="#real-time-feedback" title="Permalink to this heading">#</a></h2>
+<p>In an advanced setting, you could use WebSockets for real-time interaction, although this would be more complex to set up.</p>
+<p>Given your existing workflow and tools, combining Python in Jupyter notebooks with GitHub Pages for hosting seems like a natural fit. You can write code to evaluate quiz answers in Jupyter and use GitHub Actions to automate the scoring and feedback process, which will be presented on the GitHub Pages website.</p>
+<p>Remember to provide immediate feedback with additional resources for learning, as this will help them understand what they need to focus on for improvement.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -370,7 +458,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">.</p>
+        <p class="prev-next-title"></p>
       </div>
     </a>
     <a class="right-next"
@@ -391,6 +479,30 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook-and-python">1. Jupyter Notebook and Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-github-actions-and-github-pages">2. GitHub, GitHub Actions, and GitHub Pages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code-and-shell-scripts">3. VS Code and Shell Scripts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r-in-jupyter-notebook">4. R in Jupyter Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#embedding-media">5. Embedding Media</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-time-feedback">6. Real-time Feedback</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
