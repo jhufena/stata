@@ -334,6 +334,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash">3. bash</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stata">4. stata</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applied">5. applied</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz">6. quiz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reinforcement">7. reinforcement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#query">8. query</a></li>
 </ul>
             </nav>
         </div>
@@ -514,6 +517,65 @@ document.write(`
 <li><p>conditional (e.g. signature) - that shows the relationship between income and season</p></li>
 </ol>
 </section>
+<section id="quiz">
+<h2>6. quiz<a class="headerlink" href="#quiz" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Iterate over the years</span>
+<span class="k">for</span><span class="w"> </span>year<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>seq<span class="w"> </span><span class="m">2011</span><span class="w"> </span><span class="m">2023</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="c1"># Iterate over the months</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span>month<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>seq<span class="w"> </span>-w<span class="w"> </span><span class="m">01</span><span class="w"> </span><span class="m">12</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="c1"># Print the link</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;[bdn</span><span class="si">${</span><span class="nv">year</span><span class="si">}${</span><span class="nv">month</span><span class="si">}</span><span class="s2">](.././bdn</span><span class="si">${</span><span class="nv">year</span><span class="si">}</span><span class="s2">/bdn</span><span class="si">${</span><span class="nv">year</span><span class="si">}${</span><span class="nv">month</span><span class="si">}</span><span class="s2">.ipynb)   &quot;</span>
+<span class="w">  </span><span class="k">done</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>subject: hey, unix!</p></li>
+<li><p>verb: could you iterate over</p>
+<ul class="simple">
+<li><p>adverbial: $(seq 2011 2023)</p></li>
+</ul>
+</li>
+<li><p>object: the years?</p></li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic simple">
+<li><p>subject: hey, unix!</p></li>
+<li><p>verb: could you iterate over</p>
+<ul class="simple">
+<li><p>adverbial: $(seq -w 01 12)</p></li>
+</ul>
+</li>
+<li><p>object: the months?</p></li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic simple">
+<li><p>subject: hey, unix!</p></li>
+<li><p>verb: could you print</p>
+<ul class="simple">
+<li><p>adverbial: echo</p></li>
+</ul>
+</li>
+<li><p>object: the link?</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="reinforcement">
+<h2>7. reinforcement<a class="headerlink" href="#reinforcement" title="Permalink to this heading">#</a></h2>
+<p>its pretty clear to me that github co-pilot as of 09/05/2023 shows signs of reinforcement learning. but how is that even possible on my local machine?</p>
+<p>what sayest thou, co-pilot?</p>
+<p>… crickets …</p>
+</section>
+<hr class="docutils" />
+<section id="query">
+<h2>8. query<a class="headerlink" href="#query" title="Permalink to this heading">#</a></h2>
+<p>As of my last update in September 2021, GitHub Copilot was primarily based on supervised learning techniques and didn’t employ real-time reinforcement learning for its code suggestions. The model was trained on a large dataset of code, and the suggestions it made were generated based on that pre-trained model. Essentially, the model tries to predict the next token(s) in a sequence given the current context, which could be a few lines of code that the developer has already written.</p>
+<p>Reinforcement learning involves an agent that learns to make decisions by taking actions and receiving rewards. Real-time reinforcement learning would involve the model adapting its behavior over time based on feedback or other signals, but as far as publicly disclosed information goes, GitHub Copilot didn’t incorporate this kind of real-time learning. It’s a “static” model in the sense that once it’s trained, it doesn’t continue to learn or adapt based on how individuals use it.</p>
+<p>That said, the experience of using Copilot could be personalized to some extent—like re-ranking suggestions based on user behavior—but this is different from the model itself learning in real-time. GitHub and OpenAI could collect usage data to improve future versions of Copilot, but that’s also not the same as real-time reinforcement learning.</p>
+<p>For the most current and specific details, you might want to refer to GitHub’s or OpenAI’s latest announcements and documentation.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -570,6 +632,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash">3. bash</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stata">4. stata</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applied">5. applied</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz">6. quiz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reinforcement">7. reinforcement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#query">8. query</a></li>
 </ul>
   </nav></div>
 
