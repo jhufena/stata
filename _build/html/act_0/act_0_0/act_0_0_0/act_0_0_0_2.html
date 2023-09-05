@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>. &#8212; My Jupyter Book</title>
+    <title>Tokens = Menus + Commands &#8212; My Jupyter Book</title>
   
   
   
@@ -306,7 +306,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -317,11 +319,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>.</h1>
+    <h1>Tokens = Menus + Commands</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">1. syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#effects">2. effects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash">3. bash</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stata">4. stata</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -331,8 +344,153 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>.<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="tokens-menus-commands">
+<h1>Tokens = Menus + Commands<a class="headerlink" href="#tokens-menus-commands" title="Permalink to this heading">#</a></h1>
+<section id="syntax">
+<h2>1. syntax<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>.<span class="w"> </span>-maxdepth<span class="w"> </span><span class="m">1</span><span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.dta&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>subject: hey, unix!</p></li>
+<li><p>verb: could you find</p>
+<ul class="simple">
+<li><p>adverbs: ., -maxdepth 1, type f, -name</p></li>
+</ul>
+</li>
+<li><p>object: *.dta?</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="effects">
+<h2>2. effects<a class="headerlink" href="#effects" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># Simulate some data</span>
+<span class="c1"># Assume each composer has data for the first 35 years of life</span>
+<span class="n">years</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">36</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Set random seed for reproducibility</span>
+
+<span class="c1"># Simulating ICC data for Bach, Mozart, and Beethoven</span>
+<span class="c1"># Ensuring the values are within the range [0, 1]</span>
+<span class="n">bach_icc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mi">35</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">mozart_icc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mi">35</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">beethoven_icc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mi">35</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Concatenate data into a single DataFrame</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Year&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">years</span><span class="p">,</span> <span class="n">years</span><span class="p">,</span> <span class="n">years</span><span class="p">]),</span>
+    <span class="s1">&#39;ICC&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">bach_icc</span><span class="p">,</span> <span class="n">mozart_icc</span><span class="p">,</span> <span class="n">beethoven_icc</span><span class="p">]),</span>
+    <span class="s1">&#39;Composer&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Bach&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">35</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;Mozart&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">35</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;Beethoven&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">35</span>
+<span class="p">})</span>
+
+<span class="c1"># Add some random slopes to simulate individual &quot;dramatic arcs&quot;</span>
+<span class="c1"># Ensure the ICC values don&#39;t go beyond 0 or 1</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;ICC&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;ICC&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="o">*</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Scatter plot</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;ICC&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Composer&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># Turn off the default legend</span>
+
+<span class="c1"># Calculate and plot lines of best fit, and gather the line objects for the legend</span>
+<span class="n">line_objects</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">composer</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Bach&#39;</span><span class="p">,</span> <span class="s1">&#39;Mozart&#39;</span><span class="p">,</span> <span class="s1">&#39;Beethoven&#39;</span><span class="p">]:</span>
+    <span class="n">composer_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Composer&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">composer</span><span class="p">]</span>
+    <span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">composer_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">composer_data</span><span class="p">[</span><span class="s1">&#39;ICC&#39;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">line</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">composer_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">intercept</span> <span class="o">+</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">composer_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">composer</span><span class="si">}</span><span class="s2"> best fit&quot;</span><span class="p">)</span>
+    <span class="n">line_objects</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Dramatic Arcs of Bach, Mozart, and Beethoven&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Year of Life&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Simulated ICC&quot;</span><span class="p">)</span>
+
+<span class="c1"># Custom legend using the line objects</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">line_objects</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Bach best fit&#39;</span><span class="p">,</span> <span class="s1">&#39;Mozart best fit&#39;</span><span class="p">,</span> <span class="s1">&#39;Beethoven best fit&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+/Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+/Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+/Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+/Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+</pre></div>
+</div>
+<img alt="../../../_images/d26f84bd40c283606e8f6174ffa02152ba48dfeea39a48096061765fa9aa5e1c.png" src="../../../_images/d26f84bd40c283606e8f6174ffa02152ba48dfeea39a48096061765fa9aa5e1c.png" />
+</div>
+</div>
+</section>
+<section id="bash">
+<h2>3. bash<a class="headerlink" href="#bash" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>qsub<span class="w"> </span>-l<span class="w"> </span><span class="nv">mem_free</span><span class="o">=</span>17G,h_vmem<span class="o">=</span>17G,h_fsize<span class="o">=</span>50G<span class="w"> </span>my.nber.data.sh
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>subject: hey, unix! - <code class="docutils literal notranslate"><span class="pre">%</span></code>, terminal</p></li>
+<li><p>verb: could you submit - <code class="docutils literal notranslate"><span class="pre">qsub</span></code>, adverbs: <code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">mem_free=17G,h_vmem=17G,h_fsize=50G</span></code></p></li>
+<li><p>object: this job? - <code class="docutils literal notranslate"><span class="pre">*.sh</span></code>, bash script</p></li>
+</ol>
+</section>
+<section id="stata">
+<h2>4. stata<a class="headerlink" href="#stata" title="Permalink to this heading">#</a></h2>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">		foreach</span> v of<span class="k"> varlist</span> <span class="o">*</span> {
+<span class="k">			replace</span> <span class="nv">`v&#39;</span>=<span class="nf">round</span>(<span class="nv">`v&#39;</span>)
+<span class="k">			levelsof</span> <span class="nv">`v&#39;</span>
+<span class="k">			if</span> <span class="nf">r</span>(r) <span class="o">==</span> <span class="m">2</span> {
+<span class="k">				noi di</span> <span class="s">&quot;binary vars: </span><span class="nv">`v&#39;</span><span class="s">&quot;</span>
+			}
+<span class="k">			else if</span> <span class="nf">inrange</span>(<span class="nf">r</span>(r),<span class="m">3</span>,<span class="m">30</span>) {
+<span class="k">				noi di</span> <span class="s">&quot;categorical vars: </span><span class="nv">`v&#39;</span><span class="s">&quot;</span>
+			} 
+<span class="k">			else</span> {
+<span class="k">				noi di</span> <span class="s">&quot;continuous vars: </span><span class="nv">`v&#39;</span><span class="s">&quot;</span>
+			}
+		}
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>subject: hey, stata!</p></li>
+<li><p>verb: could you replace</p>
+<ul class="simple">
+<li><p>adverbial phrase: <code class="docutils literal notranslate"><span class="pre">foreach</span> <span class="pre">v</span> <span class="pre">of</span> <span class="pre">varlist</span> <span class="pre">*</span></code></p></li>
+</ul>
+</li>
+<li><p>object: <code class="docutils literal notranslate"><span class="pre">v</span></code> with round(<code class="docutils literal notranslate"><span class="pre">v</span></code>)?</p></li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic simple">
+<li><p>subject: hey, stata!</p></li>
+<li><p>verb: could you display</p>
+<ul class="simple">
+<li><p>adverbial: if r(r) == 2</p></li>
+</ul>
+</li>
+<li><p>object: “binary vars: <code class="docutils literal notranslate"><span class="pre">v</span></code>”?</p></li>
+</ol>
+<p>–</p>
+<ol class="arabic simple">
+<li><p>subject: hey, stata!</p></li>
+<li><p>verb: what are the levels of</p></li>
+<li><p>object: <code class="docutils literal notranslate"><span class="pre">v</span></code>?</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -375,6 +533,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">1. syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#effects">2. effects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash">3. bash</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stata">4. stata</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
