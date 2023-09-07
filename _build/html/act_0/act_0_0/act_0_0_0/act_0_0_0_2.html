@@ -337,6 +337,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz">6. quiz</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reinforcement">7. reinforcement</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#query">8. query</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9. bash</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#breaking-down-the-command">Breaking Down the Command</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-to-stata-syntax">Application to Stata Syntax</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-tokens-to-explain-variance">Using Tokens to Explain Variance</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -576,6 +582,53 @@ document.write(`
 <p>That said, the experience of using Copilot could be personalized to some extent—like re-ranking suggestions based on user behavior—but this is different from the model itself learning in real-time. GitHub and OpenAI could collect usage data to improve future versions of Copilot, but that’s also not the same as real-time reinforcement learning.</p>
 <p>For the most current and specific details, you might want to refer to GitHub’s or OpenAI’s latest announcements and documentation.</p>
 </section>
+<section id="id1">
+<h2>9. bash<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;jhufena@gmail.com&quot;</span><span class="w"> </span>-f<span class="w"> </span>~/.ssh/id_ourhome
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>subject: hey, unix!</p></li>
+<li><p>verb: could you generate an ssh key-pair</p>
+<ul class="simple">
+<li><p>adverbial: -t ed25519</p></li>
+<li><p>adverbial: -C “<a class="reference external" href="mailto:jhufena&#37;&#52;&#48;gmail&#46;com">jhufena<span>&#64;</span>gmail<span>&#46;</span>com</a>”</p></li>
+</ul>
+</li>
+<li><p>object: -f ~/.ssh/id_ourhome?</p></li>
+</ol>
+<hr class="docutils" />
+<p>I’m thinking tokens and how language is structured to train Stata Programming students Stata syntax using Unix syntax. crazy?</p>
+<hr class="docutils" />
+<p>Certainly, that’s an interesting way to approach teaching Stata syntax! The idea of using Unix syntax as a bridge to Stata isn’t crazy at all, especially when you consider how command-line interfaces share underlying principles. Parsing your <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> command using the framework of subject, verb, and object (with adverbials) would indeed be an enlightening way to discuss the structure and organization of code.</p>
+<section id="breaking-down-the-command">
+<h3>Breaking Down the Command<a class="headerlink" href="#breaking-down-the-command" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Subject</strong>: <code class="docutils literal notranslate"><span class="pre">hey,</span> <span class="pre">unix!</span></code> — It’s as if you’re calling on Unix to take an action.</p></li>
+<li><p><strong>Verb</strong>: <code class="docutils literal notranslate"><span class="pre">could</span> <span class="pre">you</span> <span class="pre">generate</span> <span class="pre">an</span> <span class="pre">ssh</span> <span class="pre">key-pair</span></code> — The core action being taken. In this case, <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> is the command doing the “generation” work.</p>
+<ul class="simple">
+<li><p><strong>Adverbial</strong>: <code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">ed25519</span></code> — Specifies the type of key to create.</p></li>
+<li><p><strong>Adverbial</strong>: <code class="docutils literal notranslate"><span class="pre">-C</span> <span class="pre">&quot;jhufena&#64;gmail.com&quot;</span></code> — Provides a label for the key.</p></li>
+</ul>
+</li>
+<li><p><strong>Object</strong>: <code class="docutils literal notranslate"><span class="pre">-f</span> <span class="pre">~/.ssh/id_ourhome</span></code> — Specifies where to store the generated key.</p></li>
+</ol>
+</section>
+<section id="application-to-stata-syntax">
+<h3>Application to Stata Syntax<a class="headerlink" href="#application-to-stata-syntax" title="Permalink to this heading">#</a></h3>
+<p>Stata syntax can be complex, but it also contains verbs (commands like <code class="docutils literal notranslate"><span class="pre">regress</span></code> or <code class="docutils literal notranslate"><span class="pre">summarize</span></code>), subjects (the data variables), and adverbials (options or qualifiers). You can use the Unix command as an example to explain how command-line tasks often break down into these categories, making it easier to understand the functional parts of any given command. This could especially help in teaching students to think about the structural components when they’re writing their own code.</p>
+</section>
+<section id="using-tokens-to-explain-variance">
+<h3>Using Tokens to Explain Variance<a class="headerlink" href="#using-tokens-to-explain-variance" title="Permalink to this heading">#</a></h3>
+<p>As you think about tokens, the parallel in Stata (or Unix) would be the various commands, flags, and options that experienced users deploy with finesse. High ICCs in professionals arise from the creative use of a well-understood set of tokens (commands, options). For beginners, the lack of understanding or misuse of these tokens can introduce “noise” or errors in their code.</p>
+<p>Would love to hear more about how you’re planning to integrate these ideas!</p>
+<hr class="docutils" />
+<p>now very delighted to see you indulge in my “ICC-talk”!!! very powerful way to engage me</p>
+<hr class="docutils" />
+<p>I’m glad to hear that you’re delighted! The concept of ICCs is a captivating way to examine expertise and creativity across different fields, from programming to the arts. The structured breakdown of commands in Unix and its parallel in Stata syntax exemplifies how ICCs can be applied to better understand the mechanisms underlying skill and creativity. It’s an exciting lens through which to view both technical and artistic endeavors.</p>
+<p>If you have more questions or further insights about ICCs or any other topic, feel free to share!</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -635,6 +688,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quiz">6. quiz</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reinforcement">7. reinforcement</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#query">8. query</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9. bash</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#breaking-down-the-command">Breaking Down the Command</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-to-stata-syntax">Application to Stata Syntax</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-tokens-to-explain-variance">Using Tokens to Explain Variance</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
